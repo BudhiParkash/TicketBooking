@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "303134286009",
+    "firebase_url": "https://ticketbokking-7993a.firebaseio.com",
+    "project_id": "ticketbokking-7993a",
+    "storage_bucket": "ticketbokking-7993a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303134286009:android:2790dbd2389d58822d7b68",
+        "android_client_info": {
+          "package_name": "com.example.ticketbokking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303134286009-koh1r3188jr89igjpi48t0c3uho23vai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDey5R7b_NLG32HwH2PDdoaKj9qXi19AVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303134286009-koh1r3188jr89igjpi48t0c3uho23vai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

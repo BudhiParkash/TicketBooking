@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/ssig2">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:text="My Doctor"
+            android:textSize="40sp"
+            android:src="@drawable/bgticket"
+            android:layout_above="@+id/ssig2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setup your account"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Its just take some second "
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Email"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:id="@+id/emailenter"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="User Name"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:id="@+id/username"
+            android:maxLines="1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Gender"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:id="@+id/gender"
+            android:maxLines="1"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:text="Finish"
+            android:layout_marginTop="20dp"
+            android:id="@+id/bFinish"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
