@@ -4,8 +4,8 @@ package  com.example.ticketbokking.network;
  * Created by ravi on 02/03/18.
  */
 
-import com.example.ticketbokking.network.model.Price;
-import com.example.ticketbokking.network.model.Ticket;
+import com.example.ticketbokking.model.Price;
+import com.example.ticketbokking.model.Ticket;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.ticketbokking.network.model;
+package com.example.ticketbokking.model;
 
 /**
  * Created by ravi on 02/03/18.

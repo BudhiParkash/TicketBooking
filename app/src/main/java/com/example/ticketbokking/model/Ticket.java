@@ -1,4 +1,4 @@
-package com.example.ticketbokking.network.model;
+package com.example.ticketbokking.model;
 
 import com.google.gson.annotations.SerializedName;
 

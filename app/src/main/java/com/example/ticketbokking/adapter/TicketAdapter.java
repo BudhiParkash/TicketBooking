@@ -1,19 +1,19 @@
 package com.example.ticketbokking.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import com.example.ticketbokking.BookScreen;
 import com.example.ticketbokking.R;
-import com.example.ticketbokking.network.model.Ticket;
+import com.example.ticketbokking.model.Ticket;
 
 import java.util.List;
 
@@ -46,11 +46,22 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
                     listener.onTicketSelected(contactList.get(getAdapterPosition()));
 
                     Ticket tickets = contactList.get(getAdapterPosition());
-                    tickets.getPrice();
-                    tickets.getAirline();
+
                     //Get Tikets data
                     //Intent pass
                     //New activity booking
+                    Intent intent = new Intent(context , BookScreen.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("price" , tickets.getPrice().getPrice()+" Rs");
+                    bundle.putString("name" , tickets.getAirline().getName());
+                    bundle.putString("deptime" , tickets.getDeparture());
+                    bundle.putString("destime" , tickets.getArrival());
+                    bundle.putString("duration" , tickets.getDuration());
+                    bundle.putString("from" , tickets.getFrom());
+                    bundle.putString("to" , tickets.getTo());
+                    intent.putExtras(bundle);
+                    context.startActivity(intent);
+
 
 
 

@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ticketbokking.adapter.TicketAdapter;
 import com.example.ticketbokking.network.ApiClient;
 import com.example.ticketbokking.network.ApiService;
-import com.example.ticketbokking.network.model.Price;
-import com.example.ticketbokking.network.model.Ticket;
+import com.example.ticketbokking.model.Price;
+import com.example.ticketbokking.model.Ticket;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
