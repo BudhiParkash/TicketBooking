@@ -1,11 +1,14 @@
 package com.example.ticketbokking.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -21,6 +24,7 @@ public class Profile extends Fragment {
     private TextView mUseremail;
     private TextView mUserPhone;
     private TextView mUsergender;
+    private Button mHelpbtn;
 
 
     public Profile() {
@@ -49,6 +53,14 @@ public class Profile extends Fragment {
         mUsernames.setText(name);
         mUserPhone.setText(number);
 
+        mHelpbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("sms:"
+                        + "999999999")));
+            }
+        });
+
 
 
         return view;
@@ -59,5 +71,6 @@ public class Profile extends Fragment {
         mUseremail = view.findViewById(R.id.useremail);
         mUserPhone = view.findViewById(R.id.userPhone);
         mUsergender = view.findViewById(R.id.usergender);
+        mHelpbtn =view.findViewById(R.id.btnhelp);
     }
 }

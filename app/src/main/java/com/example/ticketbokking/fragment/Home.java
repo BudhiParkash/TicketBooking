@@ -25,8 +25,8 @@ public class Home extends Fragment {
     private Spinner mToCity;
     private Button mSearchRoute;
     View view;
-    String[] CityFrom={"---Select City---","Hisar","Delhi","Gujrat","Punjab","Chandigarh","Sirsa","Gurgram","Noida" , "Rajsthan" , "Siwan"};
-    String[] CityTo={"---Select City---","Hisar","Delhi","Gujrat","Punjab","Chandigarh","Sirsa","Gurgram","Noida" , "Rajsthan" , "Siwan"};
+    String[] CityFrom={"---Select City---","Hisar","Delhi","Gujrat","Amritsar","Guwahati","Odisha","Kerala","Bhopal" , "Jaipur" , "Mumbai" , "Kolkata" ,"Lucknow"};
+    String[] CityTo={"---Select City---","Hisar","Delhi","Gujrat","Amritsar","Guwahati","Odisha","Kerala","Bhopal" , "Jaipur" , "Mumbai","Kolkata" ,"Lucknow"};
 
     public Home() {
         // Required empty public constructor

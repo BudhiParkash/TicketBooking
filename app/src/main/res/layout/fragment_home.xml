@@ -5,7 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backg"
     android:orientation="vertical">
+
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/home_toolbar"
@@ -13,14 +16,28 @@
         android:layout_height="?attr/actionBarSize"
         app:title="Home"
         app:titleTextColor="#ffffff"
-        android:background="?attr/colorPrimary"
-        />
+        android:background="?attr/colorPrimary"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:lottie_rawRes="@raw/animation"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+        </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
@@ -28,12 +45,17 @@
         >
 
         <TextView
+            android:textStyle="bold"
             app:drawableLeftCompat="@drawable/ic_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="21dp"
             android:text="From" />
 
         <Spinner
+            android:textColor="#ffffff"
+            android:textSize="21dp"
             android:id="@+id/from_city"
             android:layout_width="wrap_content"
             android:layout_height="45dp" />
@@ -41,11 +63,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
@@ -53,6 +74,9 @@
         >
 
         <TextView
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="21dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="To"
@@ -60,6 +84,8 @@
             />
 
         <Spinner
+            android:textColor="#ffffff"
+            android:textSize="21dp"
             android:id="@+id/to_city"
             android:layout_width="wrap_content"
             android:layout_height="45dp" />

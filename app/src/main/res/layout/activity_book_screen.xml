@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/backg"
     tools:context=".BookScreen">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,13 +17,23 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_margin="40dp"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="150dp"
+        app:lottie_rawRes="@raw/animation1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+</LinearLayout>
+
+
 
         <RelativeLayout
+            android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -32,55 +43,92 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name"/>
+                    android:text="Name:"/>
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="From"/>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="To"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Departure"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Desination"/>
+                    android:text="From:"/>
 
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Duraion"/>
+                    android:text="To:"/>
+
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Price"/>
+                    android:text="Departure:"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desination:"/>
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Duraion:"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price:"/>
             </LinearLayout>
 
             <LinearLayout
+
                 android:layout_alignParentEnd="true"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/FName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="India Air Lines"/>
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/Ffrom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -88,18 +136,30 @@
 
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/Fto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Delhi"/>
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/FtimeDep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2:30"/>
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/Ftimedes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -107,19 +167,27 @@
 
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/Fduration"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3 Hours"/>
 
                 <TextView
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:layout_margin="4dp"
+                    android:textSize="21sp"
                     android:id="@+id/Fprice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3000 Rs"/>
             </LinearLayout>
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+
 
 
 <Button

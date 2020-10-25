@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Flight Tickets</string>
+    <string name="app_name">Saffari</string>
     <string name="action_settings">Settings</string>
     <string name="lbl_price">Price</string>
     <string name="title_activity_test">TestActivity</string>

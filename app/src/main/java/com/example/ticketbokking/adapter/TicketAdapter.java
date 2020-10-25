@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +16,7 @@ import com.example.ticketbokking.BookScreen;
 import com.example.ticketbokking.R;
 import com.example.ticketbokking.model.Ticket;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -40,9 +42,11 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
         public MyViewHolder(View view) {
             super(view);
 
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     listener.onTicketSelected(contactList.get(getAdapterPosition()));
 
                     Ticket tickets = contactList.get(getAdapterPosition());
@@ -50,18 +54,23 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.MyViewHold
                     //Get Tikets data
                     //Intent pass
                     //New activity booking
-                    Intent intent = new Intent(context , BookScreen.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("price" , tickets.getPrice().getPrice()+" Rs");
-                    bundle.putString("name" , tickets.getAirline().getName());
-                    bundle.putString("deptime" , tickets.getDeparture());
-                    bundle.putString("destime" , tickets.getArrival());
-                    bundle.putString("duration" , tickets.getDuration());
-                    bundle.putString("from" , tickets.getFrom());
-                    bundle.putString("to" , tickets.getTo());
-                    intent.putExtras(bundle);
-                    context.startActivity(intent);
+                    try {
+                        Intent intent = new Intent(context , BookScreen.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("price" , tickets.getPrice().getPrice()+" Rs");
+                        bundle.putString("name" , tickets.getAirline().getName());
+                        bundle.putString("deptime" , tickets.getDeparture());
+                        bundle.putString("destime" , tickets.getArrival());
+                        bundle.putString("duration" , tickets.getDuration());
+                        bundle.putString("from" , tickets.getFrom());
+                        bundle.putString("to" , tickets.getTo());
+                        intent.putExtras(bundle);
+                        context.startActivity(intent);
+                    }
+                    catch (Exception e){
+                        Toast.makeText(context, "Please Wait .. Price Are Loading .... ", Toast.LENGTH_SHORT).show();
 
+                    }
 
 
 

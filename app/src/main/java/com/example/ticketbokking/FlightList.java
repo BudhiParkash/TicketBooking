@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,8 @@ public class FlightList extends AppCompatActivity implements TicketAdapter.Ticke
     String from;
     String to;
 
+    ProgressBar mListProgressbar;
+
     private CompositeDisposable disposable = new CompositeDisposable();
 
 
@@ -60,6 +63,8 @@ public class FlightList extends AppCompatActivity implements TicketAdapter.Ticke
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flight_list);
         initView();
+
+        mListProgressbar.setVisibility(View.VISIBLE);
 
         Intent intent = getIntent();
         from = intent.getStringExtra("fcity");
@@ -97,6 +102,7 @@ public class FlightList extends AppCompatActivity implements TicketAdapter.Ticke
                                 ticketsList.clear();
                                 ticketsList.addAll(tickets);
                                 mAdapter.notifyDataSetChanged();
+                                mListProgressbar.setVisibility(View.GONE);
                             }
 
                             @Override
@@ -152,6 +158,7 @@ public class FlightList extends AppCompatActivity implements TicketAdapter.Ticke
 
                                 ticketsList.set(position, ticket);
                                 mAdapter.notifyItemChanged(position);
+                                mListProgressbar.setVisibility(View.GONE);
                             }
 
                             @Override
@@ -205,6 +212,7 @@ public class FlightList extends AppCompatActivity implements TicketAdapter.Ticke
         mRecyclerView = findViewById(R.id.recycler_view);
         mTxtfrom = findViewById(R.id.txtfrom);
         mTxtto = findViewById(R.id.txtto);
+        mListProgressbar = findViewById(R.id.listprogressbar);
     }
 
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<androidx.cardview.widget.CardView
+    android:layout_margin="20dp"
+    android:elevation="@dimen/dimen_10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Flight Name"
+                android:textColor="#303338"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="35dp"
+                android:id="@+id/flight_name"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Hisar"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"
+                    android:id="@+id/flight_F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="To"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Delhi"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"
+                    android:id="@+id/flight_t"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="3 Hours"
+                android:textColor="#303338"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp"
+                android:maxLines="2"
+                android:id="@+id/fligt_duration"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="3:24"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"
+                    android:id="@+id/flight_depT"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="-"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="6:20"
+                    android:textColor="#303338"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"
+                    android:id="@+id/flight_desT"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/flight_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="35200 Rs."
+                android:textColor="#303338"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Status -"
+                    android:textColor="#303338"
+                    android:textSize="14sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Booking Done"
+                    android:textColor="#5CEA2A"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="2"
+                    android:id="@+id/book_status"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
